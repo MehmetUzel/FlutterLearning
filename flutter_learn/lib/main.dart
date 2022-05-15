@@ -13,8 +13,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // Remove Debug on Banner
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Mehmet Çoban'),
+          title: const Text('Mehmet Çoban'),
         ),
+        body: const Text('Harika Koyunlar Bende'),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home'
+              ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_box),
+              label: 'No'
+              )
+          ],
+          ),
       ),
       
     );
