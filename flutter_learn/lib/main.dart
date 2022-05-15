@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Mehmet Çoban'),
         ),
-        body: const Center(child: Text('Harika Koyunlar Bende')),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text('Hey Dont Click Me'),
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
