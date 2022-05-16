@@ -32,6 +32,10 @@ class _MyAppState extends State<MyApp> {
               
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.black,
+                    primary: Colors.red,
+                  ),
                   onPressed: () {
                     setState(() {
                       num++;
@@ -40,6 +44,10 @@ class _MyAppState extends State<MyApp> {
                   child: Text('Hey + Click Me ' + num.toString()),
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.black,
+                    primary: Colors.red,
+                  ),
                   onPressed: () {
                     setState(() {
                       num--;
