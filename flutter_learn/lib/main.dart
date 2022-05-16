@@ -25,9 +25,11 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: SizedBox(
             width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            height: double.infinity,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
+              
               children: [
                 ElevatedButton(
                   onPressed: () {
@@ -35,15 +37,15 @@ class _MyAppState extends State<MyApp> {
                       num++;
                     });
                   },
-                  child: Text('Hey Dont Click Me ' + num.toString()),
+                  child: Text('Hey + Click Me ' + num.toString()),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      num++;
+                      num--;
                     });
                   },
-                  child: Text('Hey Dont Click Me ' + num.toString()),
+                  child: Text('Hey - Click Me ' + num.toString()),
                 ),
               ],
             ),
