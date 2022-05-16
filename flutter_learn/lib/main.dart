@@ -14,6 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int num = 0;
   int indexnum = 0;
+  Color maincolor = Colors.green.shade400;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Mehmet Çoban'),
-          backgroundColor: Color.fromARGB(255, 104, 216, 108),
+          backgroundColor: maincolor,
         ),
         body: Center(
           child: indexnum == 0
@@ -60,10 +61,15 @@ class _MyAppState extends State<MyApp> {
                     ],
                   ),
                 )
-              : const SizedBox(),
+              : Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.orange,
+                  child: Image.network(
+                      'https://static.daktilo.com/sites/71/uploads/2021/09/11/large/e921f6aec2cfd027-1631364580.jpg')),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(255, 66, 117, 68),
+          backgroundColor: maincolor,
           selectedItemColor: Colors.white,
           items: const [
             BottomNavigationBarItem(
@@ -80,8 +86,10 @@ class _MyAppState extends State<MyApp> {
             setState(() {
               if (indexnum == 0) {
                 indexnum = 1;
+                maincolor = Colors.orange.shade400;
               } else {
                 indexnum = 0;
+                maincolor = Colors.green.shade400;
               }
             });
           },
