@@ -21,20 +21,22 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Mehmet Çoban'),
+          backgroundColor: Color.fromARGB(255, 104, 216, 108),
         ),
         body: Center(
-          child: SizedBox(
+          child: Container(
             width: double.infinity,
             height: double.infinity,
+            color: Colors.green,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     onPrimary: Colors.black,
-                    primary: Colors.red,
+                    primary: Color.fromARGB(255, 104, 216, 108),
                   ),
                   onPressed: () {
                     setState(() {
@@ -46,7 +48,7 @@ class _MyAppState extends State<MyApp> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     onPrimary: Colors.black,
-                    primary: Colors.red,
+                    primary: Color.fromARGB(255, 104, 216, 108),
                   ),
                   onPressed: () {
                     setState(() {
@@ -60,6 +62,8 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Color.fromARGB(255, 66, 117, 68),
+          selectedItemColor: Colors.white,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
