@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int num = 0;
-
+  int indexnum = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,6 +43,17 @@ class _MyAppState extends State<MyApp> {
               label: 'No',
             )
           ],
+          currentIndex: indexnum,
+          onTap: (int index){
+            setState(() {
+              if (indexnum == 0){
+                indexnum = 1;
+              }
+              else{
+                indexnum = 0;
+              }
+            });
+          },
         ),
       ),
     );
