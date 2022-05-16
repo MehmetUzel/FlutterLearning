@@ -65,8 +65,15 @@ class _MyAppState extends State<MyApp> {
                   width: double.infinity,
                   height: double.infinity,
                   color: Colors.orange,
-                  child: Image.network(
-                      'https://static.daktilo.com/sites/71/uploads/2021/09/11/large/e921f6aec2cfd027-1631364580.jpg')),
+                  child: Container(
+                    width: 200,
+                    height: 400,
+                    child: Column(
+                      children: [
+                        Image.asset('images/IMG_0288.jpeg'),
+                      ],
+                    ),
+                  )),
         ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: maincolor,
