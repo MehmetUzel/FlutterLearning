@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -23,13 +23,30 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Mehmet Çoban'),
         ),
         body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              setState(() {
-                num++;
-              });
-            },
-            child: Text('Hey Dont Click Me '+num.toString()),
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      num++;
+                    });
+                  },
+                  child: Text('Hey Dont Click Me ' + num.toString()),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      num++;
+                    });
+                  },
+                  child: Text('Hey Dont Click Me ' + num.toString()),
+                ),
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -44,12 +61,11 @@ class _MyAppState extends State<MyApp> {
             )
           ],
           currentIndex: indexnum,
-          onTap: (int index){
+          onTap: (int index) {
             setState(() {
-              if (indexnum == 0){
+              if (indexnum == 0) {
                 indexnum = 1;
-              }
-              else{
+              } else {
                 indexnum = 0;
               }
             });
