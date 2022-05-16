@@ -31,6 +31,7 @@ class firstPage extends StatefulWidget {
 class _firstPageState extends State<firstPage> {
   int num = 0;
   int indexnum = 0;
+  bool isClicked = false;
   Color maincolor = Colors.green.shade400;
   @override
   Widget build(BuildContext context) {
@@ -104,7 +105,16 @@ class _firstPageState extends State<firstPage> {
                   height: 400,
                   child: Column(
                     children: [
-                      Image.asset('images/IMG_0288.jpeg'),
+                      GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isClicked = !isClicked;
+                            });
+                          },
+                          child: isClicked
+                              ? Image.asset('images/IMG_0288.jpeg')
+                              : Image.network(
+                                  'https://www.ozenduvarkagidi.com.tr/images/makaleler/PAZARYERLERI-resim-21.jpg')),
                     ],
                   ),
                 )),
